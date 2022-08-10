@@ -1,16 +1,10 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { setUserList } from '../store/slices/user/userSlice'
 
-const useFetchAPI = (url) => {
-  const [data, setCofee] = useState([])
-  useEffect(() => {
-    axios.get(url).then(
-      (response) => {
-        setCofee(response.data)
-      }
-    ).catch((error) => alert(error))
-  }, [url])
-  return { data }
+export const useFetchAPI = (url) => (dispatch) => {
+  axios.get(url).then(
+    (response) => {
+      dispatch(setUserList(response.data.data))
+    }
+  ).catch((error) => alert(error))
 }
-
-export default useFetchAPI
