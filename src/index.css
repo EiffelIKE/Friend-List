@@ -15,4 +15,6 @@ code {
   margin: 0;
   padding: 0;
 }
-
+#root {
+  background-color: #f3f3f3;
+}
