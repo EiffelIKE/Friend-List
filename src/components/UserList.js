@@ -3,7 +3,8 @@ import { url } from '../config'
 import { useFetchAPI } from '../hooks/useFetchAPI'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from './Card'
-import '../components/styles/userlist.css'
+import './styles/userlist.css'
+import Title from './Title'
 /*eslint-disable*/
 
 const UserList = () => {
@@ -15,6 +16,7 @@ const UserList = () => {
   
   return (
     <div className='container list'>
+      <Title/>
       <div className='row'>
         {
           list.map((user, index)=>{
