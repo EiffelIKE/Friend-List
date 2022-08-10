@@ -1,3 +1,3 @@
-# Coffee Menu, React Coffee 
+# Friend List using Redux-Toolkit
 
-Fake endpoint created with json-server.
+Endpoint API: free API https://reqres.in/
